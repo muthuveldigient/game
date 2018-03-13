@@ -2,15 +2,15 @@
 $userType = (!empty($_SESSION[USER_TYPE])?$_SESSION[USER_TYPE]:'');
 $detect = new Mobile_Detect;
 $vTime = strtotime(date('Y-m-d H:i:s'));
-$rajaRaniImg = base_url().'assets/images/rajarani.png?v='.$vTime;
-$livetcImg = base_url().'assets/images/livetc.png?v='.$vTime;
+$rajaRaniImg = ASSET_URL_IMG.'/rajarani.png?v='.$vTime;
+$livetcImg = ASSET_URL_IMG.'/livetc.png?v='.$vTime;
 
 ?>
 <html>
     <head>
         <title>Home</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<script language="javascript" src="<?php echo base_url(); ?>/assets/js/jquery-2.1.4.min.js"></script>
+		<script language="javascript" src="<?php echo ASSET_URL_JS(); ?>/jquery-2.1.4.min.js"></script>
     </head>
 	<body>
 	
@@ -20,7 +20,7 @@ body{
 	font-family: sans-serif;
 	}
 	.main{
-    background-image: url(<?php echo base_url(); ?>/assets/images/bg_v2.jpg);
+    background-image: url(<?php echo ASSET_URL_IMG; ?>/bg_v2.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -86,12 +86,12 @@ a{
 </style>
 
 	<div class="main">
-	<div class="logout"><a href="<?php echo base_url(); ?>logout">Logout</a></div>
+	<div class="logout"><a href="<?php echo BASE_URL; ?>logout">Logout</a></div>
 	<div class="main_cont">
 	<?php if( $detect->isAndroidOS() ){
 				if($userType==1){ ?>
 						<div class="game_1">
-							<a href="<?php echo base_url().RAJARANI_MOBILE_HOME_URL; ?>"><img src="<?php echo $rajaRaniImg; ?>">
+							<a href="<?php echo RAJARANI_MOBILE_HOME_URL; ?>"><img src="<?php echo $rajaRaniImg; ?>">
 								<!--<div class="game_title"><span>Triple Chance</span></div>-->
 							</a>
 						</div>
@@ -101,7 +101,7 @@ a{
 		}else if( $detect->isiOS() ){
 				if($userType==1){ ?>
 					<div class="game_1">
-						<a href="<?php echo base_url().RAJARANI_MOBILE_HOME_URL; ?>"><img src="<?php echo $rajaRaniImg; ?>">
+						<a href="<?php echo RAJARANI_MOBILE_HOME_URL; ?>"><img src="<?php echo $rajaRaniImg; ?>">
 							<!--<div class="game_title"><span>Triple Chance</span></div>-->
 						</a>
 					</div>
@@ -112,18 +112,18 @@ a{
 				if($userType==1){
 		?>
 					<div class="game_1">
-						<a href="<?php echo base_url().RAJARANI_WEB_HOME_URL; ?>"><img src="<?php echo $rajaRaniImg; ?>">
+						<a href="<?php echo RAJARANI_WEB_HOME_URL; ?>"><img src="<?php echo $rajaRaniImg; ?>">
 							<!--<div class="game_title"><span>Triple Chance</span></div>-->
 						</a>
 					</div>
 					<div class="game_2">
-						<a href="<?php echo base_url().TC_HOME_URL; ?>"><img src="<?php echo $livetcImg; ?>">
+						<a href="<?php echo TC_HOME_URL; ?>"><img src="<?php echo $livetcImg; ?>">
 							<!--<div class="game_title"><span>Triple Chance Live</span></div>-->
 						</a>
 					</div>
 			<?php }elseif($userType==2){ ?>
 					<div class="game_2">
-						<a href="<?php echo base_url().TC_HOME_URL; ?>"><img src="<?php echo $livetcImg; ?>">
+						<a href="<?php echo TC_HOME_URL; ?>"><img src="<?php echo $livetcImg; ?>">
 							<!--<div class="game_title"><span>Triple Chance Live</span></div>-->
 						</a>
 					</div>

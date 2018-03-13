@@ -13,21 +13,11 @@ class Report extends CI_Controller {
         $this->load->library('session');
         $this->load->model("Game_model");
         $this->load->model("report_model");
-        $this->load->model("common/common_model");
+		$session = $this->common_model->userAuthendication();
+		if($session){
+			redirect('index');
+		}
 
-        $sql = "select * from lucky7_games where STATUS=1";
-        $rsResult = $this->db2->query($sql);
-        $result = $rsResult->result();
-        $i = 1;
-        foreach ($result as $row) {
-            define("GAME_" . $i, $row->GAMES_NAME);
-            define("GAME_DESCRIPTION_" . $i, $row->DESCRIPTION);
-            $i++;
-        }
-
-        if (($this->session->userdata(SESSION_USERID)) == '') {
-            redirect('index', 'refresh');
-        }
         $data['homeURL'] = base_url() . 'rajarani/web/';
         $data['headerLogoURL'] = base_url().'assets/web/';
         $this->load->view('common/report_header', $data);

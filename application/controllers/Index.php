@@ -11,36 +11,34 @@ class Index extends CI_Controller {
         $this->db2 = $CI->load->database('db2', TRUE);
         $this->db3 = $CI->load->database('db3', TRUE);
         $this->load->library('session');
-        $this->load->model("common/Login_model");
+		 $this->load->model("common/Login_model");
     }
 
     public function index() {
-         /** to protect the controller to be accessed only by registered users */
-//        if (($this->session->userdata(SESSION_USERID)) != '') {
-//            redirect('index/home', 'refresh');
-//        }
+		if( $this->session->userdata(SESSION_USERID) != '') {
+			redirect('index/home', 'refresh');
+		}
         $this->load->view('login/index');
     }
 
     public function loginprocess() {
         try {
-             /** to protect the controller to be accessed only by registered users */
-//            if (($this->session->userdata(SESSION_USERID)) != '') {
-//                redirect('index/home', 'refresh');
-//            }
+			if( $this->session->userdata(SESSION_USERID) != '') {
+				redirect('index/home', 'refresh');
+			}
             if (!empty($_POST['username']) && !empty($_POST['password'])) {
                 $result = $this->Login_model->validate_login($_POST);
             } else {
                 $result = '5';
             }
             if ($result == 1) {
-                redirect('index/home');
+				redirect('index/home');
             } else {
                 $this->session->set_flashdata('message', 'Invalid login please try again');
                 redirect('index');
             }
         } catch (Exception $err) {
-            log_message("error", $err->getMessage());
+            //log_message("error", $err->getMessage());
             //return show_error($err->getMessage());
         }
     }
@@ -102,13 +100,13 @@ class Index extends CI_Controller {
 
     // ajax captcha reload function.
     public function refresh() {
-
         $image = $this->create_captcha();
         // Display captcha image
         echo $image;
     }
 
     public function home() {
+		$this->common_model->userAuthendication();
         $this->load->view('login/home');
     }
 }

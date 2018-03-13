@@ -28,7 +28,7 @@
 			var pdata2 = $('#ticketForm').serialize();
 			$.ajax({
 				type: "POST",
-				url: BASE_URL+"/rajarani/web/ticketprocess",
+				url: BASE_URL+"/rajarani/ajaxcall/ticketprocess",
 				data: pdata2,
 				dataType: "json",
 				success: function(res) {
@@ -41,7 +41,9 @@
 						setTimeout( function() {
 							$("#success-msg").fadeOut();
 						}, 4000 );
-					}else if(res.msg=="expired") {
+					}else if(res.msg=="expired") {//session expired
+						$("#loading").addClass('overlay');
+						$("#msg").show().html('Session Expired').removeClass('alert-success').addClass('alert-danger');
 						location.reload();
 					}else{
 						$('#msg').html(res.msg).fadeIn();
@@ -163,7 +165,7 @@ $( document ).ready(function() {
 
 function serverTime() {
 	var time = null;
-	$.ajax({url: BASE_URL+'/rajarani/web/getdbtime',
+	$.ajax({url: BASE_URL+'/rajarani/ajaxcall/getdbtime',
 		async: false, dataType: 'text',
 		success: function(text) {
 			//time = new Date(text);
@@ -192,10 +194,14 @@ function liftOff() {
 	$('#ndrawLeftTime span').removeClass('text_blink');
 	$.ajax({
 		type:"POST",
-		url:BASE_URL+"/rajarani/web/nextdrawtime/"+curDrawIDNext,
+		url:BASE_URL+"/rajarani/ajaxcall/nextdrawtime/"+curDrawIDNext,
 		dataType: "json",
 		success:function(response) {
-			if(response.status =="available") {
+			if(response.status =="expired") { //session expired
+				$("#loading").addClass('overlay');
+				$("#msg").show().html('Session Expired').removeClass('alert-success').addClass('alert-danger');
+				location.reload();
+			}else if(response.status =="available") {
 				$('#drawID').val(response.DRAW_ID);
 				$('#drawName').val(response.DRAW_NUMBER);
 				$('#drawPrice').val(response.DRAW_PRICE);

@@ -25,13 +25,13 @@
         <link rel="apple-touch-startup-image" href="images/ios_startup-6@2x.png" sizes="750x1294">
         <link rel="apple-touch-startup-image" href="images/ios_startup-6-plus@3x.png" sizes="1242x2148">
 
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets//css/bootstrap.css" type="text/css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets//css/font-awesome.min.css" type="text/css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets//css/style_login.css?v=<?php echo $vTime ;?>" type="text/css">
+        <link rel="stylesheet" href="<?php echo ASSET_URL_CSS; ?>/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="<?php echo ASSET_URL_CSS; ?>/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="<?php echo ASSET_URL_CSS; ?>/style_login.css?v=<?php echo $vTime ;?>" type="text/css">
         <!--<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />-->
-        <script src="<?php echo base_url(); ?>/assets/js/jquery-2.1.4.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/bootstrap.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/jquery.validate.min.js"></script>
+        <script src="<?php echo ASSET_URL_JS; ?>/jquery-2.1.4.min.js" type="text/javascript"></script>
+        <script src="<?php echo ASSET_URL_JS; ?>/bootstrap.js"></script>
+        <script src="<?php echo ASSET_URL_JS; ?>/jquery.validate.min.js"></script>
     </head>
     <style>
         .loginParent{
@@ -96,7 +96,7 @@
             width:100%;
             height:100%;
             z-index:999999 !important;   
-            background:url(<?php echo base_url(); ?>/assets/images/pageloader_login.gif)center center no-repeat;
+            background:url(<?php echo ASSET_URL_IMG; ?>/pageloader_login.gif)center center no-repeat;
         }
     </style>
 </head>
@@ -119,7 +119,7 @@
                     <?php if ($this->session->flashdata('message')) { ?>
                         <div class='notification alert alert-danger' style="display: block" id="log_msg"><?php echo $this->session->flashdata('message'); ?></div>
                     <?php } ?>
-                    <form name="frmLogin" id="frmLogin" action="<?php echo base_url() . LOGIN_FORM_URL; ?>" method="post">
+                    <form name="frmLogin" id="frmLogin" action="<?php echo LOGIN_FORM_URL; ?>" method="post">
                         <div class="form_input_sec">
                             <!--<label class="input_head_login">USERNAME</label>-->
                             <fieldset>
@@ -140,7 +140,7 @@
                                 <!--<button name="submit" class="form_btn log_btn_1" type="submit">LOGIN</button>-->
                                 <input name="submit" class="form_btn log_btn_1" type="submit" id="submit_btn" value="LOGIN" />
                                 <!--<img style="display: none; text-align: center; height: 26px; margin: 0 auto;" id="log_loader" src="images/loader.gif" />-->
-                                <div class="" style="width: 100%;text-align: center;"><img style="display: none;text-align: center;height: 26px;margin: 0 auto;" id="log_loader" src="<?php echo base_url();?>assets/images/loader.gif"></div>
+                                <div class="" style="width: 100%;text-align: center;"><img style="display: none;text-align: center;height: 26px;margin: 0 auto;" id="log_loader" src="<?php echo ASSET_URL_IMG;?>/loader.gif"></div>
                             </fieldset>
                         </div>
                     </form>

@@ -85,23 +85,42 @@ defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automat
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
 
-define('URL_REDIRECT', 'WINTC');
-define('URL_REDIRECT_WINTC', 'WINTC');
-define('URL_REDIRECT_RR', 'RAJARANI');
+/** URL defined */
+define('BASE_URL', 'http://local.games.com/');
+define('ASSET_URL', BASE_URL.'assets/'); //Asset url
+define('ASSET_URL_CSS', ASSET_URL.'css'); //Asset url css
+define('ASSET_URL_JS', ASSET_URL.'js'); //Asset url js
+define('ASSET_URL_IMG', ASSET_URL.'images'); //Asset url js
+
+define('RR_ASSET_URL', ASSET_URL.'rajarani/'); //Rajarani Asset url
+define('RR_ASSET_URL_CSS', RR_ASSET_URL.'css'); //Rajarani css Asset url
+define('RR_ASSET_URL_JS', RR_ASSET_URL.'js'); //Rajarani js Asset url
+define('RR_ASSET_URL_IMG', RR_ASSET_URL.'images'); //Rajarani image Asset url
+
+define('RR_WEB_ASSET_URL_CSS', RR_ASSET_URL.'web/css'); //Rajarani web Asset url
+define('RR_WEB_ASSET_URL_JS', RR_ASSET_URL.'web/js'); //Rajarani web Asset url
+define('RR_WEB_ASSET_URL_IMG', RR_ASSET_URL.'web/images'); //Rajarani web Asset url
+
+define('RR_MOB_ASSET_URL_CSS', RR_ASSET_URL.'mob/css'); //Rajarani Mobile Asset url
+define('RR_MOB_ASSET_URL_JS', RR_ASSET_URL.'mob/js'); //Rajarani Mobile Asset url
+define('RR_MOB_ASSET_URL_IMG', RR_ASSET_URL.'mob/images'); //Rajarani Mobile Asset url
+
+define('LOGIN_FORM_URL', BASE_URL.'/index/loginprocess');
+define('LOGIN_URL', BASE_URL.'login.php');
+define('LOGIN_LANDING_URL', BASE_URL.'home.php');
+define('TC_SITE_URL', BASE_URL.'/tclotto/');
+
+/** web socket URL */
+define('TC_WEB_SOCKET_URL', "ws://54.254.155.69:8899/?encoding=text");
+define('RR_WEB_SOCKET_URL', "ws://54.254.155.69:7722/?encoding=text");
 
 define('RR_GAME_ID', '1');
 define('TC_GAME_ID', '2');
 
-define('RAJARANI_LOGIN_FORM_URL', '/rajarani/login/loginprocess');
-define('LOGIN_FORM_URL', '/index/loginprocess');
-define('TC_LOGIN_FORM_URL', '/tc/login/loginprocess');
-define('BIGBOSS_LOGIN_FORM_URL', '/bigboss/login/loginprocess');
-
-define('RAJARANI_MOBILE_HOME_URL', '/rajarani/mobile/index');
-define('RAJARANI_WEB_HOME_URL', '/rajarani/web/index');
-define('TC_HOME_URL', '/tclotto/home/index');
-define('BIGBOSS_HOME_URL', '/bigboss/home/index');
-
+define('RAJARANI_MOBILE_HOME_URL', BASE_URL.'/rajarani/mobile/index');
+define('RAJARANI_WEB_HOME_URL', BASE_URL.'/rajarani/web/index');
+define('TC_HOME_URL', BASE_URL.'/tclotto/home/index');
+define('BIGBOSS_HOME_URL', BASE_URL.'/bigboss/home/index');
 
 define('SESSION_USERNAME', 'lucky_ter_username');
 define('SESSION_USERID', 'lucky_ter_userid');
@@ -111,13 +130,6 @@ define('SESSIONID', 'lucky_sessionID');
 define('SESSION_USEREMAIL', 'lucky_email');
 define('SESSION_USERCONTACT', 'lucky_contact');
 define('USER_TYPE', 'lucky_user_type');
-
-define('LOGIN_URL', 'http://qawinbigboss.digient.co/login.php');
-define('LOGIN_LANDING_URL', 'http://qawinbigboss.digient.co/home.php');
-define('TC_SITE_URL', 'http://qawinbigboss.digient.co/tclotto/');
-define('TC_WEB_SOCKET_URL', "ws://54.254.155.69:8899/?encoding=text");
-define('RR_WEB_SOCKET_URL', "ws://54.254.155.69:7722/?encoding=text");
-
 
 define('SD_COMM', 90);
 define('AG_COMM', 80);

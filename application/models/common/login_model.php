@@ -8,10 +8,9 @@ class Login_model extends CI_Model {
     function __construct() {
         parent::__construct();
         $this->load->database();
-//        $this->load->model("Dberr_model");
     }
 
-    // Admin login validate.
+    // login validate.
     public function validate_login() {
 
         $username = $this->db2->escape_str($this->input->post('username'));
@@ -31,12 +30,12 @@ class Login_model extends CI_Model {
         if (empty($row)) {
 
             $loginStatus = 4; // Login failed.
-            //Admin login tracking.
+            //login tracking.
             $this->admin_tracking($loginStatus, $username);
-            //Function to get admin login failed tracking count.
+            //Function to get login failed tracking count.
             //$rowcount = $this->admin_login_failed_count($username);
             //if ((int) $rowcount > 3) {
-            // Alert admin by mail or sms if login failed more then 3 times.
+            // Alert  by mail or sms if login failed more then 3 times.
             //   $this->alert_admin();
             // }
             $res = 2;
@@ -87,7 +86,7 @@ class Login_model extends CI_Model {
         $sessionID = substr(str_shuffle($keyString), 0, 13);
 
         $data = array('SESSION_ID' => $sessionID, 'LOGIN_STATUS' => 1);
-        $this->db2->where('ADMIN_USER_ID', $row->USER_ID);
+        $this->db2->where('USER_ID', $row->USER_ID);
         $this->db2->update('user', $data);
 
         $userdata = array(
@@ -99,8 +98,7 @@ class Login_model extends CI_Model {
             USER_TYPE => $row->USER_TYPE,
             SESSIONID => $sessionID
         );
-
-        $this->session->set_userdata($userdata);
+       $this->session->set_userdata($userdata);
     }
 
 }

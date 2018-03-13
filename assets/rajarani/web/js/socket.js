@@ -317,11 +317,13 @@ function animateInfo() {
 	 var drawID = $('#future').val();
 	 $.ajax({
 			type : "GET",
-			url : "userbalance_update.php?id="+drawID,
+			url : BASE_URL+"rajarani/ajaxcall/userbalanceupdate/"+drawID,
 			dataType:"json",
 			success : function(res) {
-				if(res.SESSION == 0){
-					window.location.href = "home.php";
+				if(res.SESSION == 1){//session expired
+					$("#loading").addClass('overlay');
+					$("#msg").show().html('Session Expired').removeClass('alert-success').addClass('alert-danger');
+					location.reload();
 				}else{
 					$('#userBalance').html(res.USER_BAL);
 					$('#nxtdrawTime').html(res.nxtDrawTime);
@@ -341,13 +343,13 @@ function animateInfo() {
 					else {
 					  $("#loading").addClass('overlay');
 					  $("#msg").show().html('Please connect network and reload a page').removeClass('alert-success').addClass('alert-danger');
-					  location.reload();
+					 // location.reload();
 					}
 			  } else if (xhr.readyState == 0) {
 				    // Network error (i.e. connection refused, access denied due to CORS, etc.)
 	              $("#loading").addClass('overlay');
 	   	          $("#msg").show().html('Please connect network and reload a page').removeClass('alert-success').addClass('alert-danger');
-				   location.reload();
+				   //location.reload();
 			  }
 				  
 	            

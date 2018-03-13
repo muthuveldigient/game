@@ -115,6 +115,7 @@ switch (ENVIRONMENT)
  * NO TRAILING SLASH!
  */
 	$application_folder = 'application';
+	$asset_folder = 'assets';
 
 /*
  *---------------------------------------------------------------
@@ -217,6 +218,29 @@ switch (ENVIRONMENT)
 		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
 		exit(3); // EXIT_CONFIG
 	}
+	
+	/** asset folder */
+	if (($_temp = realpath($asset_folder)) !== FALSE)
+	{
+		$asset_folder = $_temp.DIRECTORY_SEPARATOR;
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$asset_folder = strtr(
+			rtrim($asset_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
+
+	// Is the system path correct?
+	if ( ! is_dir($asset_folder))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
 
 /*
  * -------------------------------------------------------------------
@@ -228,6 +252,9 @@ switch (ENVIRONMENT)
 
 	// Path to the system directory
 	define('BASEPATH', $system_path);
+	
+	// Path to the system directory
+	define('ASSET_PATH', $asset_folder);
 
 	// Path to the front controller (this file) directory
 	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);

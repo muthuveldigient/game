@@ -11,9 +11,16 @@ class Logout extends CI_Controller
 	}
     
 	public function index($err = NULL) {
+		$SESSION_USERID = $this->session->userdata(SESSION_USERID);
+        $SESSION_USERNAME = $this->session->userdata(SESSION_USERNAME);
+		
+		$update = array("LOGIN_STATUS" => 0 );
+		$this->db2->where("USER_ID",$SESSION_USERID);
+		$this->db2->update("user",$update);
+
 		/** tracking info */
 		$arrTraking["DATE_TIME"] = date('Y-m-d h:i:s');
-		$arrTraking["USERNAME"]     =$this->session->userdata(SESSION_USERNAME);
+		$arrTraking["USERNAME"]     =SESSION_USERNAME;
 		$arrTraking["ACTION_NAME"]  ="Web Logout";
 		$arrTraking["SYSTEM_IP"]    =$_SERVER['REMOTE_ADDR'];				
 		$arrTraking["REFERRENCE_NO"]=uniqid();
@@ -22,7 +29,8 @@ class Logout extends CI_Controller
 		$arrTraking["CUSTOM1"]      ='Web Logout';
 		$arrTraking["CUSTOM2"]      =1;
 		$this->db2->insert("tracking",$arrTraking);
-                $this->session->sess_destroy();
+		$this->session->sess_destroy();
+		
 		redirect('index');
 	}
 }

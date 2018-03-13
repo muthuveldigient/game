@@ -2,20 +2,20 @@
     <head>
         <title>RajaRani</title>
         <meta name="viewport"content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/bootstrap.css" type="text/css">
-        <script type="text/javascript" src="<?php echo base_url(); ?>/assets/js/jquery-2.1.4.min.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/bootstrap.js"></script>
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/web/css/style.css?v=<?php echo $vTime; ?>" type="text/css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/font-awesome.min.css" type="text/css">
-        <link href="<?php echo base_url(); ?>/assets/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="<?php echo ASSET_URL_CSS;?>/bootstrap.css" type="text/css">
+        <script type="text/javascript" src="<?php echo ASSET_URL_JS;?>/jquery-2.1.4.min.js"></script>
+        <script src="<?php echo ASSET_URL_JS;?>/bootstrap.js"></script>
+        <link rel="stylesheet" href="<?php echo RR_WEB_ASSET_URL_CSS; ?>/style.css?v=<?php echo $vTime; ?>" type="text/css">
+        <link rel="stylesheet" href="<?php echo ASSET_URL_CSS;?>/font-awesome.min.css" type="text/css">
+        <link href="<?php echo ASSET_URL_CSS;?>/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
     </head>
     <script type="text/javascript">
         var WEB_SOCKET_URL = '<?php echo RR_WEB_SOCKET_URL; ?>';
-        var BASE_URL = '<?php echo base_url(); ?>';
+        var BASE_URL = '<?php echo BASE_URL; ?>';
     </script>
     <body>
         <div class="home_load">
-            <img src="<?php echo base_url(); ?>/assets/web/images/home.gif">
+            <img src="<?php echo RR_ASSET_URL_IMG; ?>/home.gif">
         </div>
 
         <div id="confirmation" >
@@ -51,7 +51,7 @@
 
                 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                     <div class="logo">
-                        <img src="<?php echo base_url(); ?>/assets/web/images/logo.png">
+                        <img src="<?php echo RR_ASSET_URL_IMG; ?>/logo.png">
                     </div>
                 </div>
                 <div class='col-lg-4 notification_success alert alert-danger' style="display: none; font-weight: bold;" id="msg"></div>
@@ -212,7 +212,7 @@
                                             if ($count == 10) {
 
                                                 echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $s . ',' . $i . ')">
-                                                                                <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
+                                                                                <div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
                                                                         </div>';
                                                 if ($i != 99) {
                                                     echo '</div><div class="middlecont_1">';
@@ -226,34 +226,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
 
                                     </div>
@@ -278,7 +278,7 @@
                                             <?php
                                             if ($count == 10) {
                                                 echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $s . ',' . $j . ')">
-                                                                                <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
+                                                                                <div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
                                                                         </div>';
                                                 if ($j != 99) {
                                                     echo '</div><div class="middlecont_1">';
@@ -292,34 +292,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
 
                                     </div>
@@ -345,7 +345,7 @@
                                                 <?php
                                                 if ($count == 10) {
                                                     echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $s . ',' . $k . ')">
-                                                                                                                            <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
+                                                                                                                            <div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
                                                                                                                     </div>';
                                                     if ($k != 99) {
                                                         echo '</div><div class="middlecont_1">';
@@ -358,34 +358,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
 
                                     </div>
@@ -411,8 +411,8 @@
                                                     if ($count == 10) {
                                                         $count = 0;
                                                         echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $s . ',' . $l . ')">
-                                                                                                                                <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
-                                                                                                                        </div>';
+																	<div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
+															</div>';
                                                         if ($l != 99) {
                                                             echo '</div><div class="middlecont_1">';
                                                         }
@@ -424,34 +424,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
 
                                     </div>
@@ -476,7 +476,7 @@
                                             <?php
                                             if ($count == 10) {
                                                 echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $s . ',' . $m . ')">
-                                                                                                                        <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
+                                                                                                                        <div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
                                                                                                                 </div>';
                                                 if ($m != 99) {
                                                     echo '</div><div class="middlecont_1">';
@@ -489,34 +489,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
 
                                     </div>
@@ -541,7 +541,7 @@
                                             <?php
                                             if ($count == 10) {
                                                 echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $s . ',' . $n . ')">
-                                                                                                                        <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
+                                                                                                                        <div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
                                                                                                                 </div>';
                                                 if ($n != 99) {
                                                     echo '</div><div class="middlecont_1">';
@@ -554,34 +554,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
 
                                     </div>
@@ -607,7 +607,7 @@
                                             if ($count == 10) {
 
                                                 echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $s . ',' . $p . ')">
-                                                                                                                        <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
+                                                                                                                        <div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
                                                                                                                 </div>';
                                                 if ($p != 99) {
                                                     echo '</div><div class="middlecont_1">';
@@ -620,34 +620,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
 
                                     </div>
@@ -673,7 +673,7 @@
                                                 if ($count == 10) {
 
                                                     echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $s . ',' . $q . ')">
-                                                                <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
+                                                                <div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
                                                         </div>';
                                                     if ($q != 99) {
                                                         echo '</div><div class="middlecont_1">';
@@ -686,34 +686,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
 
                                     </div>
@@ -739,7 +739,7 @@
                                         if ($count == 10) {
 
                                             echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $s . ',' . $r . ')">
-                                                                                                                    <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
+                                                                                                                    <div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
                                                                                                             </div>';
                                             if ($r != 99) {
                                                 echo '</div><div class="middlecont_1">';
@@ -752,34 +752,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
 
                                     </div>
@@ -805,7 +805,7 @@
                                             if ($count == 10) {
 
                                                 echo '<div class="table_midcont select_row" onclick="randomPickRowNumber(' . $sn . ',' . $s . ')">
-                                                                                                                        <div class="select_row_1"><img class="img-responsive" src="' . base_url() . '/assets/web/images/arrow1.png"></div>
+                                                                                                                        <div class="select_row_1"><img class="img-responsive" src="' .RR_WEB_ASSET_URL_IMG.'/arrow1.png"></div>
                                                                                                                 </div>';
                                                 if ($s != 99) {
                                                     echo '</div><div class="middlecont_1">';
@@ -818,34 +818,34 @@
                                     </div>
                                     <div class="middlecont_1 hide_desk">
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(0)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(1)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(2)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(3)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(4)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(5)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(6)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(7)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(8)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                         <div class="table_midcont select_row" onclick="randomPickEndedNumber(9)">
-                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo base_url(); ?>/assets/web/images/arrow.png"></div>
+                                            <div class="select_row_1"><img class="img-responsive" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/arrow.png"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -1456,7 +1456,7 @@
                         <a href="<?php echo base_url() . 'rajarani/report/gamehistory'; ?>" >
                             <input type="button" value="REPORT" class="report_1" id="report"> 
                         </a>
-                        <a href="<?php echo base_url() . 'rajarani/web/previousResult'; ?>" class="" id="resultchat">
+                        <a href="<?php echo base_url() . 'rajarani/ajaxcall/previousResult'; ?>" class="" id="resultchat">
                             <input type="button" value="RESULT CHART" class="rescht_1" id="result_chat">
                         </a>
                         <input type="button" value="BUY" id="buy" class="submit_1" onClick="submitData()">
@@ -1466,7 +1466,7 @@
                         <div id="result_timer">
                             <div id="small-dialog2" class="mfp-hide w3ls_small_dialog wthree_pop">
                                 <div class="popup_head">
-                                    <img class="result_logo" src="<?php echo base_url(); ?>/assets/web/images/logo.png">
+                                    <img class="result_logo" src="<?php echo RR_WEB_ASSET_URL_IMG; ?>/logo.png">
                                 </div>
                                 <div class="popup_head">RESULTS <span  class="preDrawTime"  title="previous result time"><?= $preDrawTimeFull ?></span><span class="timer_1" id="countTimer" style="display:none;">10 <small>sec</small></span></div>
                                 <div class="results_cont" id="timer">
@@ -1977,115 +1977,115 @@
                 </div>
             </div>
         </div>
-        <script src="<?php echo base_url(); ?>/assets/js/jquery.plugin.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/jquery.countdown.js"></script>
-        <script src="<?php echo base_url(); ?>/assets/web/js/dashboard.js?v=<?php echo $vTime; ?>"></script>
-        <script src="<?php echo base_url(); ?>/assets/js/jquery.magnific-popup.js" type="text/javascript"></script>
+        <script src="<?php echo ASSET_URL_JS;?>/jquery.plugin.js"></script>
+        <script src="<?php echo ASSET_URL_JS;?>/jquery.countdown.js"></script>
+        <script src="<?php echo RR_WEB_ASSET_URL_JS; ?>/dashboard.js?v=<?php echo $vTime; ?>"></script>
+        <script src="<?php echo ASSET_URL_JS;?>/jquery.magnific-popup.js" type="text/javascript"></script>
         <script>
-                            /*** date and time display start */
-                            var currenttime = '<? print $dbTime; ?>';
-                            //var currenttime1 = '<?= date("Y-m-d H:i:s") ?>'
-                            var montharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
-                            var serverdate = new Date(currenttime);
-                            //console.log(currenttime1);
-                            //console.log(serverdate);
-                            function padlength(what) {
-                                var output = (what.toString().length == 1) ? "0" + what : what
-                                return output
-                            }
+		/*** date and time display start */
+		var currenttime = '<? print $dbTime; ?>';
+		//var currenttime1 = '<?= date("Y-m-d H:i:s") ?>'
+		var montharray = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+		var serverdate = new Date(currenttime);
+		//console.log(currenttime1);
+		//console.log(serverdate);
+		function padlength(what) {
+			var output = (what.toString().length == 1) ? "0" + what : what
+			return output
+		}
 
-                            function displaytime() {
+		function displaytime() {
 
-                                var hours = serverdate.getHours();
-                                var ampm = hours >= 12 ? 'PM' : 'AM';
-                                hours = hours % 12;
-                                hours = hours ? hours : 12; // the hour '0' should be '12'
+			var hours = serverdate.getHours();
+			var ampm = hours >= 12 ? 'PM' : 'AM';
+			hours = hours % 12;
+			hours = hours ? hours : 12; // the hour '0' should be '12'
 
-                                serverdate.setSeconds(serverdate.getSeconds() + 1)
-                                var timestring = hours + ":" + padlength(serverdate.getMinutes()) + ":" + padlength(serverdate.getSeconds())
-                                document.getElementById("servertime").innerHTML = timestring + ' ' + ampm;
-                            }
+			serverdate.setSeconds(serverdate.getSeconds() + 1)
+			var timestring = hours + ":" + padlength(serverdate.getMinutes()) + ":" + padlength(serverdate.getSeconds())
+			document.getElementById("servertime").innerHTML = timestring + ' ' + ampm;
+		}
 
-                            window.onload = function () {
-                                setInterval("displaytime()", 1000);
-                            }
-                            /*** date and time display end** countdown timer start  */
+		window.onload = function () {
+			setInterval("displaytime()", 1000);
+		}
+		/*** date and time display end** countdown timer start  */
 
-                            $(document).ready(function () {
-                            <?php if (!empty($buttonDisabled)) { ?>
-                                    $("#frmCancelTicket").addClass("disabled");
-                                    $("#frmReprintTicket").addClass("disabled");
-                                    $('.disabled').prop('disabled', true);
-                            <?php } ?>
-
-
-                                $(function () {
-                                    $('#ndrawLeftTime').html('00:00:00');
-                                    var timeLeft = '';
-                                    <?php if (!empty($drawCountDownTime)) { ?>
-                                        timeLeft = new Date(<?php echo $drawCountDownTime; ?>); //2016,0,06,11,56,01
-                                        //$('#ndrawLeftTime').countdown({until: timeLeft,serverSync: serverTime, format: 'HMS', padZeroes: true, compact: true,onExpiry: liftOff});
-                                        $('#ndrawLeftTime').countdown({
-                                            until: timeLeft,
-                                            serverSync: serverTime,
-                                            format: 'HMS',
-                                            padZeroes: true,
-                                            compact: true,
-                                            onExpiry: liftOff,
-                                            onTick: function (periods) {
-                                                var secs = $.countdown.periodsToSeconds(periods);
-                                                if (secs < 60) {
-                                                    $('#ndrawLeftTime span').addClass('text_blink');
-                                                }
-                                            }
-                                        });
-                                  <?php } ?>
-                                });
+		$(document).ready(function () {
+		<?php if (!empty($buttonDisabled)) { ?>
+				$("#frmCancelTicket").addClass("disabled");
+				$("#frmReprintTicket").addClass("disabled");
+				$('.disabled').prop('disabled', true);
+		<?php } ?>
 
 
-                                $('.popup-with-zoom-anim').magnificPopup({
-                                    type: 'inline',
-                                    fixedContentPos: false,
-                                    fixedBgPos: true,
-                                    overflowY: 'auto',
-                                    closeBtnInside: true,
-                                    preloader: false,
-                                    midClick: true,
-                                    removalDelay: 300,
-                                    mainClass: 'my-mfp-zoom-in'
-                                });
-                                $('#resultchat').magnificPopup({
-                                    type: 'ajax'
-                                });
-                            });
+			$(function () {
+				$('#ndrawLeftTime').html('00:00:00');
+				var timeLeft = '';
+				<?php if (!empty($drawCountDownTime)) { ?>
+					timeLeft = new Date(<?php echo $drawCountDownTime; ?>); //2016,0,06,11,56,01
+					//$('#ndrawLeftTime').countdown({until: timeLeft,serverSync: serverTime, format: 'HMS', padZeroes: true, compact: true,onExpiry: liftOff});
+					$('#ndrawLeftTime').countdown({
+						until: timeLeft,
+						serverSync: serverTime,
+						format: 'HMS',
+						padZeroes: true,
+						compact: true,
+						onExpiry: liftOff,
+						onTick: function (periods) {
+							var secs = $.countdown.periodsToSeconds(periods);
+							if (secs < 60) {
+								$('#ndrawLeftTime span').addClass('text_blink');
+							}
+						}
+					});
+			  <?php } ?>
+			});
 
-                            $(function () {
-                                //      animateInfo();
-                            })
 
-                            /* page going to idle above 3 min then reload the page */
-                            var idleTime = 0;
-                            $(document).ready(function () {
-                                //Increment the idle time counter every minute.
-                                var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+			$('#resultchat').magnificPopup({
+				type: 'ajax'
+			});
+		});
 
-                                //Zero the idle timer on mouse movement.
-                                $(this).mousemove(function (e) {
-                                    idleTime = 0;
-                                });
-                                $(this).keypress(function (e) {
-                                    idleTime = 0;
-                                });
-                            });
+		$(function () {
+			//      animateInfo();
+		})
 
-                            function timerIncrement() {
-                                idleTime = idleTime + 1;
-                                if (idleTime > 5) { // 5 minutes
-                                    $('#idlestate').show();
-                                }
-                            }
+		/* page going to idle above 3 min then reload the page */
+		var idleTime = 0;
+		$(document).ready(function () {
+			//Increment the idle time counter every minute.
+			var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+
+			//Zero the idle timer on mouse movement.
+			$(this).mousemove(function (e) {
+				idleTime = 0;
+			});
+			$(this).keypress(function (e) {
+				idleTime = 0;
+			});
+		});
+
+		function timerIncrement() {
+			idleTime = idleTime + 1;
+			if (idleTime > 5) { // 5 minutes
+				$('#idlestate').show();
+			}
+		}
         </script>
-                 <script src="<?php echo base_url(); ?>/assets/web/js/socket.js?v=<?php echo $vTime; ?>"></script>
+                 <script src="<?php echo RR_WEB_ASSET_URL_JS; ?>/socket.js?v=<?php echo $vTime; ?>"></script>
     </body>
     <script>
         $('.home_load').hide();
